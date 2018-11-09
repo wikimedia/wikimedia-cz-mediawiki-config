@@ -206,6 +206,8 @@ $wgShellLocale = "en_US.UTF-8";
 $wgLanguageCode = "cs";
 $wgLocaltimezone = 'Europe/Prague';
 
+$wgFixDoubleRedirects = true; // No double redirects
+
 ## ======================================================================
 ## Upgrade stuff
 ## ======================================================================
