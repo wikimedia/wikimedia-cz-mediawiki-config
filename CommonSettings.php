@@ -135,6 +135,7 @@ wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'Nuke' );
 wfLoadExtension( 'Gadgets' );
 wfLoadExtension( 'ParserFunctions' );
+wfLoadExtension( 'TemplateStyles' );
 $wgPFEnableStringFunctions = true;
 
 wfLoadExtension( 'timeline' );
