@@ -163,8 +163,8 @@ $wgDefaultUserOptions['wikieditor-publish'] = 0;
 wfLoadSkin('MonoBook');
 wfLoadSkin('Vector');
 
-$wgLogo = "//wiki.wikimedia.cz/images/wmcz_logo_135.png";
-$wgFavicon = '//wiki.wikimedia.cz/images/favicon.ico';
+$wgLogo = "/static/images/wmcz_logo_135.png";
+$wgFavicon = '/static/images/favicon.ico';
 
 ## ======================================================================
 ## Import
