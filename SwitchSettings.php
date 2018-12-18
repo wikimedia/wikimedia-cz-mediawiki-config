@@ -18,7 +18,9 @@ elseif (isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] == 'wiki.wikim
 elseif (isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] == 'www.wikimedia.cz') {
   $wikiId = 'pub_wiki';
 }
-else {
+elseif (isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] == 'tech.wikimedia.cz') {
+  $wikiId = 'tech_wiki';
+} else {
     // Fail gracefully if no value was set to the $wikiId variable, i.e. if no wiki was determined
     die( 'It was not possible to determine the wiki ID.' );
 }
