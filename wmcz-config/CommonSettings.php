@@ -35,6 +35,9 @@ $wgDBmysql5 = true;
 $wgDBprefix = "";
 $wgDBTableOptions   = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
 
+// Configure cache
+$wgMainCacheType = CACHE_MEMCACHED;
+
 // Load skins and extensions
 wfLoadSkins( [ 'Vector', 'MonoBook', 'Modern', 'CologneBlue', 'Timeless' ] );
 wfLoadExtension( 'Cite' );
