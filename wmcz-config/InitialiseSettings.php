@@ -89,7 +89,7 @@ $wgConf->settings = [
         'default' => false,
     ],
     'wgLogo' => [
-        'default' => '/static/images/wmcz_logo.png',
+        'default' => '/static/images/wmcz_logo_135.png',
     ],
     'wgSitename' => [
         'default' => 'Wikimedia ČR',
