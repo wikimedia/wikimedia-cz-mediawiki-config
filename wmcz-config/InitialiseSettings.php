@@ -114,5 +114,8 @@ $wgConf->settings = [
     ],
     'wmgMaintenance' => [
         'default' => false,
-    ]
+    ],
+    'wgBlockDisablesLogin' => [
+        'default' => true,
+    ],
 ];
