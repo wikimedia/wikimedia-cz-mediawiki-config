@@ -118,4 +118,10 @@ $wgConf->settings = [
     'wgBlockDisablesLogin' => [
         'default' => true,
     ],
+    'wgExtraSignatureNamespaces' => [
+        'default' => [ NS_PROJECT, ],
+        'innerwiki' => [
+            NS_MAIN,
+        ],
+    ],
 ];
