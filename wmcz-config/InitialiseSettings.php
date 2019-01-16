@@ -107,7 +107,7 @@ $wgConf->settings = [
         'pubwiki' => true,
     ],
     'wgNamespacesWithSubpages' => [
-        'innerwiki' => [
+        'default' => [
             0 => true,
             1 => true,
         ],
