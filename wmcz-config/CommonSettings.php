@@ -141,6 +141,7 @@ if ($wmgSSO) {
     $wgSharedPrefix = '';
     $wgSharedTables[] = 'user_groups';
     $wgSharedTables[] = 'ipblocks';
+    $wgSharedTables[] = "ipblocks_restrictions";
 }
 
 // Debug
