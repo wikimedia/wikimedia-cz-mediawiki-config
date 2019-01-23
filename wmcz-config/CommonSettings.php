@@ -38,6 +38,11 @@ $wgDBTableOptions   = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
 // Configure cache
 $wgMainCacheType = CACHE_DB;
 
+// Configure email notifications
+$wgEnotifWatchlist = true;
+$wgEnotifUserTalk = true;
+
+
 // Load skins and extensions
 wfLoadSkins( [ 'Vector', 'MonoBook', 'Modern', 'CologneBlue', 'Timeless' ] );
 wfLoadExtension( 'Cite' );
