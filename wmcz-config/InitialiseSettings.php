@@ -124,4 +124,9 @@ $wgConf->settings = [
             NS_MAIN,
         ],
     ],
+    'wgImportSources' => [
+        'default' => [
+            'w'
+        ]
+    ]
 ];
