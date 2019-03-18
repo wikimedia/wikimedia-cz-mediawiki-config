@@ -97,6 +97,14 @@ $wgImageMagickConvertCommand = "/usr/bin/convert";
 $wgSVGConverter = 'rsvg';
 $wgMaxImageArea = 3e7;
 
+// Extra extensions (TODO: Move to IS.php)
+$wgFileExtensions[] = 'docx';
+$wgFileExtensions[] = 'xls';
+$wgFileExtensions[] = 'pdf';
+$wgFileExtensions[] = 'mpp';
+$wgFileExtensions[] = 'odt';
+$wgFileExtensions[] = 'ods';
+
 $wgUseInstantCommons = true; // Commons
 
 $wgAllowCopyUploads = true;
