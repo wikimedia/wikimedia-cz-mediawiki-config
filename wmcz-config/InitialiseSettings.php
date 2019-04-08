@@ -128,5 +128,8 @@ $wgConf->settings = [
         'default' => [
             'w'
         ]
-    ]
+    ],
+    'wgThanksConfirmationRequired' => [
+    	'default' => false,
+    ],
 ];
