@@ -165,5 +165,19 @@ if ($wmgMaintenance) {
     $wgShowDBErrorBacktrace = true;
 }
 
+// Visualeditor
+if ( $wmgVisualEditor ) {
+	wfLoadExtension( 'VisualEditor' );
+	$wgDefaultUserOptions['visualeditor-enable'] = 1;
+	if ( !isset( $_SERVER['REMOTE_ADDR'] ) OR $_SERVER['REMOTE_ADDR'] == '127.0.0.1' ) {
+		$wgGroupPermissions['*']['read'] = true;
+		$wgGroupPermissions['*']['edit'] = true;
+	}
+}
+
 // Test
 $wgHTTPImportTimeout = 1000;
+$wgVirtualRestConfig['modules']['parsoid'] = array(
+    'url' => 'http://localhost:8000',
+    'domain' => 'wiki.wikimedia.cz',
+);

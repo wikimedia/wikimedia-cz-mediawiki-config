@@ -132,4 +132,8 @@ $wgConf->settings = [
     'wgThanksConfirmationRequired' => [
     	'default' => false,
     ],
+    'wmgVisualEditor' => [
+	'default' => false,
+	'innerwiki' => false,
+    ],
 ];
