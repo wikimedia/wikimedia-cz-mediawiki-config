@@ -169,7 +169,7 @@ if ($wmgMaintenance) {
 if ( $wmgVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
 	$wgDefaultUserOptions['visualeditor-enable'] = 1;
-	if ( !isset( $_SERVER['REMOTE_ADDR'] ) OR $_SERVER['REMOTE_ADDR'] == '2a01:430:17:1::ffff:1416' OR $_SERVER['REMOTE_ADDR'] == '37.205.8.151' ) {
+	if ( !isset( $_SERVER['REMOTE_ADDR'] ) OR $_SERVER['REMOTE_ADDR'] == '2a01:430:17:1::ffff:1416' OR $_SERVER['REMOTE_ADDR'] == '37.205.8.151' OR $_SERVER['REMOTE_ADDR'] == '127.0.0.1' ) {
 		$wgGroupPermissions['*']['read'] = true;
 		$wgGroupPermissions['*']['edit'] = true;
 	}
