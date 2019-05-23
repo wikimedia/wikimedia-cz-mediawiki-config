@@ -134,6 +134,6 @@ $wgConf->settings = [
     ],
     'wmgVisualEditor' => [
 	'default' => false,
-	'innerwiki' => false,
+	'pubwiki' => true,
     ],
 ];
