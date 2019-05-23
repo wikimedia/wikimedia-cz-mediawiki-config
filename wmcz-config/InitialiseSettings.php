@@ -136,4 +136,8 @@ $wgConf->settings = [
 	'default' => false,
 	'pubwiki' => true,
     ],
+    'wgUseFileCache' => [
+        'default' => true,
+        'private' => false,
+    ],
 ];
