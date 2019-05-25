@@ -135,6 +135,7 @@ $wgConf->settings = [
     'wmgVisualEditor' => [
 	'default' => false,
 	'pubwiki' => true,
+	'innerwiki' => true,
     ],
     'wgUseFileCache' => [
         'default' => true,
