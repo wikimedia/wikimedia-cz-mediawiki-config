@@ -34,10 +34,9 @@ $wgConf->settings = [
                 'interwiki' => true,
                 'userrights' => false,
             ],
-            // To show only, make technical account group to make automated member counts easier
-            'techaccount' => [
-
-            ]
+            // Groups not counted in auto member counts, no special rghts, to show only
+            'techaccount' => [],
+            'nonmember' => [],
         ]
     ],
     'groupOverrides' => [
