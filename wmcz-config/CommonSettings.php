@@ -1,5 +1,9 @@
 <?php
 
+# Set realm
+global $wmgRealm;
+$wmgRealm = trim( file_get_contents( '/etc/wikimedia-cluster' ) ?: 'production' );
+
 # Switching stuff
 if ( defined( 'MW_DB' ) ) {
     // Command-line mode and maintenance scripts (e.g. update.php) 
@@ -7,7 +11,12 @@ if ( defined( 'MW_DB' ) ) {
 } else {
     // Web server
     $server = $_SERVER['SERVER_NAME'];
-    if ( preg_match( '/^(.*)\.wikimedia.cz$/', $server, $matches ) ) {
+    if ( $wmgRealm === 'production' ) {
+        $rootDomain = 'wikimedia.cz';
+    } elseif ( $wmgRealm === 'dev' ) {
+        $rootDomain = 'wmcz.wikifarm';
+    }
+    if ( preg_match( "/^(.*)\.$rootDomain$/" , $server, $matches ) ) {
         $wikiname = $matches[1];
     } else {
         die( "Invalid host name, can't determine wiki name" );
@@ -36,7 +45,9 @@ $wgDBprefix = "";
 $wgDBTableOptions   = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
 
 // Configure cache
-$wgMainCacheType = CACHE_MEMCACHED;
+if ( $wmgRealm === 'production' ) {
+    $wgMainCacheType = CACHE_MEMCACHED;
+}
 
 // Configure email notifications
 $wgEnotifWatchlist = true;
