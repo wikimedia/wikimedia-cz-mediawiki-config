@@ -4,8 +4,8 @@ global $wgConf;
 
 $wgConf->settings = [
     'wmgSSO' => [
-        'default' => true,
-        'separate' => false,
+        'default' => false,
+        'sul' => true,
     ],
     'wgLanguageCode' => [
         'default' => 'cs',
@@ -13,15 +13,6 @@ $wgConf->settings = [
     ],
     'groupOverrides2' => [
         'default' => [
-            '*' => [
-                'createaccount' => false,
-            ],
-            'user' => [
-                // If you add something normally sensitive here, revoke the privilege for separate wikis,
-                // as those are publicly editable
-                'upload_by_url' => true,
-                'suppressredirect' => true,
-            ],
             'sysop' => [
                 'deleterevision' => true,
                 'deletelogentry' => true,
@@ -32,11 +23,7 @@ $wgConf->settings = [
                 'suppressionlog' => true,
                 'suppressrevision' => true,
                 'interwiki' => true,
-                'userrights' => false,
             ],
-            // Groups not counted in auto member counts, no special rghts, to show only
-            'techaccount' => [],
-            'nonmember' => [],
         ]
     ],
     'groupOverrides' => [
@@ -60,17 +47,17 @@ $wgConf->settings = [
                 'edit' => false,
             ],
         ],
-        'separate' => [
+        'sul' => [
             '*' => [
-                'createaccount' => true,
+                'createaccount' => false,
             ],
             'user' => [
-                'upload_by_url' => false,
-                'suppressredirect' => false,
+                'upload_by_url' => true,
+                'suppressredirect' => true,
             ],
-            'bureaucrat' => [
-                'userrights' => true,
-            ],
+            // Groups not counted in auto member counts, no special rghts, to show only
+            'techaccount' => [],
+            'nonmember' => [],
         ],
         '+innerwiki' => [
             'bureaucrat' => [

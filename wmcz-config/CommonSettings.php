@@ -140,7 +140,7 @@ $confParams = [
     'site'    => $site,
 ];
 $dblists = [];
-foreach (["private", "separate", "fishbowl"] as $dblist) {
+foreach (["private", "sul", "fishbowl"] as $dblist) {
     $wikis = DBLists::readDbListFile( $dblist );
     if ( in_array( $wgDBname, $wikis ) ) {
         $dblists[] = $dblist;
