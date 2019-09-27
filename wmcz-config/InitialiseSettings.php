@@ -55,6 +55,9 @@ $wgConf->settings = [
                 'upload_by_url' => true,
                 'suppressredirect' => true,
             ],
+            'bureaucrat' => [
+                'userrights' => false, // central logging on innerwiki
+            ],
             // Groups not counted in auto member counts, no special rghts, to show only
             'techaccount' => [],
             'nonmember' => [],
