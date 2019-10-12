@@ -201,5 +201,13 @@ if ( $wmgVisualEditor ) {
 	);
 }
 
+// OAuth
+if ( $wmgUseOAuth  ) {
+	wfLoadExtension( 'OAuth' );
+	$wgGroupPermissions['user']['mwoauthproposeconsumer'] = true;
+	$wgGroupPermissions['user']['mwoauthupdateownconsumer'] = true;
+	$wgGroupPermissions['bureaucrat']['mwoauthmanageconsumer'] = true;
+}
+
 // Test
 $wgHTTPImportTimeout = 1000;

@@ -135,4 +135,8 @@ $wgConf->settings = [
         'default' => true,
         'private' => false,
     ],
+    'wmgUseOAuth' => [
+    	'default' => false,
+	'innerwiki' => true,
+    ],
 ];
