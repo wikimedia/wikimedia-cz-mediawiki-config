@@ -207,6 +207,7 @@ if ( $wmgUseOAuth  ) {
 	$wgGroupPermissions['user']['mwoauthproposeconsumer'] = true;
 	$wgGroupPermissions['user']['mwoauthupdateownconsumer'] = true;
 	$wgGroupPermissions['bureaucrat']['mwoauthmanageconsumer'] = true;
+	$wgWhitelistRead[] = 'Special:OAuth';
 }
 
 // Test
