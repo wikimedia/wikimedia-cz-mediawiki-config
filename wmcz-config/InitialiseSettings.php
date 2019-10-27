@@ -139,4 +139,13 @@ $wgConf->settings = [
         'default' => false,
         'innerwiki' => true,
     ],
+    'wgVisualEditorAvailableNamespaces' => [
+        'default' => [
+            'User' => true,
+            'File' => true,
+            'Help' => true,
+            'Category' => true,
+            'Project' => true,
+        ],
+    ]
 ];
