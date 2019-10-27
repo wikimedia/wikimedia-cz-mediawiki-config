@@ -27,7 +27,7 @@ $wgConf->settings = [
         ]
     ],
     'groupOverrides' => [
-        'private' => [
+        '+private' => [
             '*' => [
                 'read' => false,
                 'edit' => false,
@@ -42,12 +42,12 @@ $wgConf->settings = [
                 'skipcaptcha' => true,
             ],
         ],
-        'fishbowl' => [
+        '+fishbowl' => [
             '*' => [
                 'edit' => false,
             ],
         ],
-        'sul' => [
+        '+sul' => [
             '*' => [
                 'createaccount' => false,
             ],
