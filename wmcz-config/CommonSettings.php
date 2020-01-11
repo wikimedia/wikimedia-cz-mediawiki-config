@@ -189,14 +189,15 @@ if ($wmgMaintenance) {
 if ( $wmgVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
 	$wgDefaultUserOptions['visualeditor-enable'] = 1;
-	if ( !isset( $_SERVER['REMOTE_ADDR'] ) OR $_SERVER['REMOTE_ADDR'] == '172.17.0.2' ) {
+
+	if ( !isset( $_SERVER['REMOTE_ADDR'] ) OR $_SERVER['REMOTE_ADDR'] == '37.205.8.151' /** Current public IP **/ ) {
 		$wgGroupPermissions['*']['read'] = true;
 		$wgGroupPermissions['*']['edit'] = true;
 	}
 
 	// Set parsoid location
 	$wgVirtualRestConfig['modules']['parsoid'] = array(
-	    'url' => 'http://localhost:8080',
+	    'url' => 'http://localhost:8000',
 	    'domain' => $wgDBname,
 	);
 }
