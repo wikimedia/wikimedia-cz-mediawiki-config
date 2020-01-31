@@ -23,6 +23,7 @@ $wgConf->settings = [
                 'suppressionlog' => true,
                 'suppressrevision' => true,
                 'interwiki' => true,
+                'siteadmin' => true,
             ],
         ]
     ],
