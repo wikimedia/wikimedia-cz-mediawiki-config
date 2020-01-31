@@ -107,8 +107,8 @@ $wgConf->settings = [
             1 => true,
         ],
     ],
-    'wmgMaintenance' => [
-        'default' => false,
+    'wmgDebug' => [
+    	'default' => false,
     ],
     'wgBlockDisablesLogin' => [
         'default' => true,

@@ -178,7 +178,7 @@ if ($wmgSSO) {
 }
 
 // Debug
-if ($wmgMaintenance) {
+if ($wmgDebug) {
     $wgShowExceptionDetails = true;
     $wgDebugToolbar = true;
     $wgShowSQLErrors = true;
