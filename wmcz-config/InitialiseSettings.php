@@ -148,5 +148,9 @@ $wgConf->settings = [
             'Category' => true,
             'Project' => true,
         ],
-    ]
+    ],
+    'wmgUseImgAuth' => [
+        'default' => false,
+        'private' => true,
+    ],
 ];

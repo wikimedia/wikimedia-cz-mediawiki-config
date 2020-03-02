@@ -110,8 +110,9 @@ $wgPasswordSender = "mw@wikimedia.cz";
 // Configure uploads
 $wgEnableUploads       = true;
 $wgUploadDirectory = "/var/www/wikis/images/$wgDBname";
-$wgUploadPath = "/mw/img_auth.php"; // TODO: Only for private, probably some changes in apache will be needed too.
 $wgUploadSizeWarning = 4 * 1024 * 1024;
+$wgUploadPath = "/uploads/$wgDBname";
+
 $wgUseImageMagick = false; // unicode fails
 $wgImageMagickConvertCommand = "/usr/bin/convert";
 $wgSVGConverter = 'rsvg';
@@ -210,6 +211,11 @@ if ( $wmgUseOAuth  ) {
 	$wgGroupPermissions['bureaucrat']['mwoauthmanageconsumer'] = true;
 	$wgWhitelistRead[] = 'Special:OAuth';
 	$wgWhitelistRead[] = 'Speciální:OAuth';
+}
+
+// For private wikis, use img_auth.php
+if ( $wmgUseImgAuth ) {
+	$wgUploadPath = "/mw/img_auth.php";
 }
 
 // Test
