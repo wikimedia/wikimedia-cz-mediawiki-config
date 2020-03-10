@@ -120,6 +120,13 @@ $wgImageMagickConvertCommand = "/usr/bin/convert";
 $wgSVGConverter = 'rsvg';
 $wgMaxImageArea = 3e7;
 
+// PDF handler
+wfLoadExtension( 'PdfHandler' );
+$wgPdfProcessor = '/usr/bin/gs';
+$wgPdfPostProcessor = $wgImageMagickConvertCommand;
+$wgPdfInfo = '/usr/bin/pdfinfo';
+$wgPdftoText = '/usr/bin/pdftotext';
+
 // Extra extensions (TODO: Move to IS.php)
 $wgFileExtensions[] = 'docx';
 $wgFileExtensions[] = 'xls';
