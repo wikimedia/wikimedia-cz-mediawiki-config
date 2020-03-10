@@ -115,7 +115,7 @@ $wgUploadSizeWarning = 4 * 1024 * 1024;
 $wgUploadPath = "/uploads/$wgDBname";
 $wgThumbnailScriptPath = "{$wgScriptPath}/thumb.php";
 
-$wgUseImageMagick = false; // unicode fails
+$wgUseImageMagick = true;
 $wgImageMagickConvertCommand = "/usr/bin/convert";
 $wgSVGConverter = 'rsvg';
 $wgMaxImageArea = 3e7;
