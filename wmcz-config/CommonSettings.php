@@ -42,6 +42,7 @@ $wgDebugLogGroups = array(
 	'resourceloader' => '/var/log/mediawiki/resourceloader.log',
 	'exception' => '/var/log/mediawiki/exception.log',
 	'error' => '/var/log/mediawiki/error.log',
+	'thumb' => '/var/log/mediawiki/thumb.log'
 );
 
 // Configure database
