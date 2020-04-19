@@ -174,6 +174,11 @@ foreach ( $groupOverrides as $group => $permissions ) {
 	$wgGroupPermissions[$group] = $permissions + $wgGroupPermissions[$group];
 }
 
+// Temporary bypass of T245149
+if ( in_array( $_SERVER['REMOTE_ADDR'], [ '2a01:430:17:1::ffff:1416', '37.205.8.151' ] ) ) {
+	$wgGroupPermissions['*']['read'] = true;
+}
+
 if($wmgUseWidgets) {
     wfLoadExtension( 'Widgets' );
 }
