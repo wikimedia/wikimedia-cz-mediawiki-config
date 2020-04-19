@@ -3,6 +3,12 @@
 global $wgConf;
 
 $wgConf->settings = [
+    'wgServer' => [
+        'default' => false,
+        'pubwiki' => 'https://www.wikimedia.cz',
+        'innerwiki' => 'https://wiki.wikimedia.cz',
+        'techwiki' => 'https://tech.wikimedia.cz',
+    ],
     'wmgSSO' => [
         'default' => false,
         'sul' => true,
