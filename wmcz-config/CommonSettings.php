@@ -79,7 +79,7 @@ wfLoadExtension( 'Thanks' );
 wfLoadExtension( 'CharInsert' );
 wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'Nuke' );
-wfLoadExtension( 'Gadgets' );
+//wfLoadExtension( 'Gadgets' );
 wfLoadExtension( 'ParserFunctions' );
 wfLoadExtension( 'TemplateStyles' );
 $wgPFEnableStringFunctions = true;
