@@ -175,7 +175,7 @@ foreach ( $groupOverrides as $group => $permissions ) {
 }
 
 // Temporary bypass of T245149
-if ( in_array( $_SERVER['REMOTE_ADDR'], [ '2a01:430:17:1::ffff:1416', '37.205.8.151' ] ) ) {
+if ( isset( $_SERVER['REMOTE_ADDR'] ) && in_array( $_SERVER['REMOTE_ADDR'], [ '2a01:430:17:1::ffff:1416', '37.205.8.151' ] ) ) {
 	$wgGroupPermissions['*']['read'] = true;
 }
 
