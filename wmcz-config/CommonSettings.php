@@ -104,7 +104,7 @@ $wgDefaultUserOptions['wikieditor-preview'] = 0;
 $wgDefaultUserOptions['wikieditor-publish'] = 0;
 
 // Configure misc common things
-$wgScriptPath = '/mw/';
+$wgScriptPath = '/mw';
 $wgArticlePath      = "/wiki/$1";
 $wgPasswordSender = "mw@wikimedia.cz";
 
