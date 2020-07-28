@@ -140,6 +140,8 @@ $wgUseInstantCommons = true; // Commons
 $wgAllowCopyUploads = true;
 $wgCopyUploadsFromSpecialUpload = true;
 
+$wgEnableRestAPI = true;
+
 // Real configuration
 $wgConf = new SiteConfiguration;
 list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
