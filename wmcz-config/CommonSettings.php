@@ -146,6 +146,9 @@ $wgEnableRestAPI = true;
 
 // Real configuration
 $wgConf = new SiteConfiguration;
+$wgConf->wikis = DBLists::readDbListFile( 'all' );
+$wgLocalDatabases = $wgConf->getLocalDatabases();
+
 list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 require __DIR__ . "/InitialiseSettings.php";
 $confParams = [
