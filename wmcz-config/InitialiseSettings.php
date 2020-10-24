@@ -80,6 +80,11 @@ $wgConf->settings = [
 			'sysop' => [ 'nonmember' ],
 		],
 	],
+	'wgRemoveGroups' => [
+		'innerwiki' => [
+			'sysop' => [ 'nonmember' ],
+		],
+	],
 	'wgUseRCPatrol' => [
 		'default' => false,
 	],
