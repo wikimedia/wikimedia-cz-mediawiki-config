@@ -6,29 +6,29 @@ $wmgRealm = trim( file_get_contents( '/etc/wikimedia-cluster' ) ?: 'production' 
 
 # Switching stuff
 if ( defined( 'MW_DB' ) ) {
-    // Command-line mode and maintenance scripts (e.g. update.php) 
-    $wgDBname = MW_DB;
+	// Command-line mode and maintenance scripts (e.g. update.php) 
+	$wgDBname = MW_DB;
 } else {
-    // Web server
-    $server = $_SERVER['SERVER_NAME'];
-    if ( $wmgRealm === 'production' ) {
-        $rootDomain = 'wikimedia.cz';
-    } elseif ( $wmgRealm === 'dev' ) {
-        $rootDomain = 'wmcz.wikifarm';
-    }
-    if ( preg_match( "/^(.*)\.$rootDomain$/" , $server, $matches ) ) {
-        $wikiname = $matches[1];
-    } else {
-        die( "Invalid host name, can't determine wiki name" );
-        // Optional: Redirect to a "No such wiki" page.
-    }
-    if ( $wikiname === "www" ) {
-        // Optional: Override database name of your "main" wiki (otherwise "wwwwiki")
-        $wikiname = "pub";
-    } else if ( $wikiname === "wiki" ) {
-        $wikiname = "inner";
-    }
-    $wgDBname = $wikiname . "wiki";
+	// Web server
+	$server = $_SERVER['SERVER_NAME'];
+	if ( $wmgRealm === 'production' ) {
+		$rootDomain = 'wikimedia.cz';
+	} elseif ( $wmgRealm === 'dev' ) {
+		$rootDomain = 'wmcz.wikifarm';
+	}
+	if ( preg_match( "/^(.*)\.$rootDomain$/" , $server, $matches ) ) {
+		$wikiname = $matches[1];
+	} else {
+		die( "Invalid host name, can't determine wiki name" );
+		// Optional: Redirect to a "No such wiki" page.
+	}
+	if ( $wikiname === "www" ) {
+		// Optional: Override database name of your "main" wiki (otherwise "wwwwiki")
+		$wikiname = "pub";
+	} else if ( $wikiname === "wiki" ) {
+		$wikiname = "inner";
+	}
+	$wgDBname = $wikiname . "wiki";
 }
 
 // Load external stuff
@@ -56,7 +56,7 @@ $wgDBTableOptions   = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
 
 // Configure cache
 if ( $wmgRealm === 'production' ) {
-    $wgMainCacheType = CACHE_MEMCACHED;
+	$wgMainCacheType = CACHE_MEMCACHED;
 }
 
 // Configure email notifications
@@ -152,16 +152,16 @@ $wgLocalDatabases = $wgConf->getLocalDatabases();
 list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 require __DIR__ . "/InitialiseSettings.php";
 $confParams = [
-    'lang'    => $lang,
-    'docRoot' => $_SERVER['DOCUMENT_ROOT'],
-    'site'    => $site,
+	'lang'    => $lang,
+	'docRoot' => $_SERVER['DOCUMENT_ROOT'],
+	'site'    => $site,
 ];
 $dblists = [];
 foreach (["private", "sul", "fishbowl"] as $dblist) {
-    $wikis = DBLists::readDbListFile( $dblist );
-    if ( in_array( $wgDBname, $wikis ) ) {
-        $dblists[] = $dblist;
-    }
+	$wikis = DBLists::readDbListFile( $dblist );
+	if ( in_array( $wgDBname, $wikis ) ) {
+		$dblists[] = $dblist;
+	}
 }
 $globals = $wgConf->getAll( $wgDBname, "wiki", $confParams, $dblists );
 extract( $globals );
@@ -187,24 +187,24 @@ if ( isset( $_SERVER['REMOTE_ADDR'] ) && in_array( $_SERVER['REMOTE_ADDR'], [ '2
 }
 
 if($wmgUseWidgets) {
-    wfLoadExtension( 'Widgets' );
+	wfLoadExtension( 'Widgets' );
 }
 
 // Shared database, if necessary
 if ($wmgSSO) {
-    $wgSharedDB = 'wikiusers';
-    $wgSharedPrefix = '';
-    $wgSharedTables[] = 'user_groups';
-    $wgSharedTables[] = 'ipblocks';
-    $wgSharedTables[] = "ipblocks_restrictions";
+	$wgSharedDB = 'wikiusers';
+	$wgSharedPrefix = '';
+	$wgSharedTables[] = 'user_groups';
+	$wgSharedTables[] = 'ipblocks';
+	$wgSharedTables[] = "ipblocks_restrictions";
 }
 
 // Debug
 if ($wmgDebug) {
-    $wgShowExceptionDetails = true;
-    $wgDebugToolbar = true;
-    $wgShowSQLErrors = true;
-    $wgShowDBErrorBacktrace = true;
+	$wgShowExceptionDetails = true;
+	$wgDebugToolbar = true;
+	$wgShowSQLErrors = true;
+	$wgShowDBErrorBacktrace = true;
 }
 
 // Visualeditor
@@ -219,8 +219,8 @@ if ( $wmgVisualEditor ) {
 
 	// Set parsoid location
 	$wgVirtualRestConfig['modules']['parsoid'] = array(
-	    'url' => 'http://localhost:8000',
-	    'domain' => $wgDBname,
+		'url' => 'http://localhost:8000',
+		'domain' => $wgDBname,
 	);
 }
 
