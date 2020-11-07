@@ -9,6 +9,7 @@ $wgConf->settings = [
 		'oldwiki' => 'https://old.wikimedia.cz',
 		'innerwiki' => 'https://wiki.wikimedia.cz',
 		'techwiki' => 'https://tech.wikimedia.cz',
+		'docswiki' => 'https://docs.wikimedia.cz',
 	],
 	'wmgSSO' => [
 		'default' => false,

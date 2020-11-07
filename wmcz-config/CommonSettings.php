@@ -194,6 +194,7 @@ if($wmgUseWidgets) {
 if ($wmgSSO) {
 	$wgSharedDB = 'wikiusers';
 	$wgSharedPrefix = '';
+	$wgSharedTables[] = 'user';
 	$wgSharedTables[] = 'user_groups';
 	$wgSharedTables[] = 'ipblocks';
 	$wgSharedTables[] = "ipblocks_restrictions";
