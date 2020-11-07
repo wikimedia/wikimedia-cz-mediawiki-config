@@ -6,6 +6,7 @@ $wgConf->settings = [
 	'wgServer' => [
 		'default' => false,
 		'pubwiki' => 'https://www.wikimedia.cz',
+		'oldwiki' => 'https://old.wikimedia.cz',
 		'innerwiki' => 'https://wiki.wikimedia.cz',
 		'techwiki' => 'https://tech.wikimedia.cz',
 	],
@@ -103,6 +104,7 @@ $wgConf->settings = [
 	'wgHashedUploadDirectory' => [
 		'default' => true,
 		'pubwiki' => false,
+		'oldwiki' => false,
 	],
 	'wgDefaultSkin' => [
 		'default' => 'vector',
