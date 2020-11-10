@@ -114,6 +114,7 @@ $wgConf->settings = [
 	'wmgUseWidgets' => [
 		'default' => false,
 		'pubwiki' => true,
+		'oldwiki' => true,
 	],
 	'wgNamespacesWithSubpages' => [
 		'default' => [
