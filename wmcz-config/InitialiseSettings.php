@@ -56,6 +56,14 @@ $wgConf->settings = [
 				'edit' => false,
 			],
 		],
+		'+lockeddown' => [
+			'*' => [
+				'edit' => false,
+			],
+			'user' => [
+				'edit' => false,
+			],
+		],
 		'+sul' => [
 			'*' => [
 				'createaccount' => false,
