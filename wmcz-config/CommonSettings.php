@@ -35,17 +35,6 @@ if ( defined( 'MW_DB' ) ) {
 require_once __DIR__ . "/PrivateSettings.php";
 require_once __DIR__ . "/../DBLists.php";
 
-// Logging
-$wgDBerrorLog = '/var/log/mediawiki/dberror.log';
-$wgRateLimitLog = '/var/log/mediawiki/ratelimit.log';
-$wgDebugLogGroups = array(
-	'resourceloader' => '/var/log/mediawiki/resourceloader.log',
-	'exception' => '/var/log/mediawiki/exception.log',
-	'error' => '/var/log/mediawiki/error.log',
-	'thumb' => '/var/log/mediawiki/thumb.log',
-	'authentication' => '/var/log/mediawiki/authentication.log',
-);
-
 // Configure database
 $wgDBuser = "wikiuser";
 $wgDBadminuser = "wikiadmin";
@@ -186,6 +175,9 @@ foreach ( $groupOverrides as $group => $permissions ) {
 if ( isset( $_SERVER['REMOTE_ADDR'] ) && in_array( $_SERVER['REMOTE_ADDR'], [ '2a01:430:17:1::ffff:1416', '37.205.8.151' ] ) ) {
 	$wgGroupPermissions['*']['read'] = true;
 }
+
+// Logging
+//require_once __DIR__ . '/logging.php';
 
 if($wmgUseWidgets) {
 	wfLoadExtension( 'Widgets' );

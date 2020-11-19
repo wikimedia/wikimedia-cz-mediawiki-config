@@ -15,6 +15,18 @@ $wgConf->settings = [
 		'default' => false,
 		'sul' => true,
 	],
+	'wmgDefaultMonologHandler' => [
+		'default' => 'blackhole',
+	],
+	'wmgMonologChannels' => [
+		'default' => [
+			'exception' => 'debug',
+			'error' => 'debug',
+			'thumb' => 'info',
+			'ratelimit' => 'debug',
+			'dberror' => 'debug',
+		]
+	],
 	'wgLanguageCode' => [
 		'default' => 'cs',
 		'techwiki' => 'en',
