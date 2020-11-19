@@ -154,6 +154,7 @@ $wgConf->settings = [
 		'default' => false,
 		'pubwiki' => true,
 		'innerwiki' => true,
+		'docswiki' => true,
 	],
 	'wgUseFileCache' => [
 		'default' => true,
