@@ -156,7 +156,8 @@ $wgConf->settings = [
 	],
 	'wgImportSources' => [
 		'default' => [
-			'w'
+			'w',
+			'web',
 		]
 	],
 	'wgThanksConfirmationRequired' => [
