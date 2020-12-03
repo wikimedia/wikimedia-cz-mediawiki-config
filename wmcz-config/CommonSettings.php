@@ -177,7 +177,7 @@ if ( isset( $_SERVER['REMOTE_ADDR'] ) && in_array( $_SERVER['REMOTE_ADDR'], [ '2
 }
 
 // Logging
-//require_once __DIR__ . '/logging.php';
+require_once __DIR__ . '/logging.php';
 
 if($wmgUseWidgets) {
 	wfLoadExtension( 'Widgets' );
