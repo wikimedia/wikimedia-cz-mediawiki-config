@@ -189,4 +189,9 @@ $wgConf->settings = [
 		'default' => false,
 		'private' => true,
 	],
+	'wgDefaultRobotPolicy' => [
+		'default' => 'index,follow',
+		'oldwiki' => 'noindex,nofollow',
+		'private' => 'noindex,nofollow',
+	],
 ];
