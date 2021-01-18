@@ -5,7 +5,6 @@ global $wgConf;
 $wgConf->settings = [
 	'wgServer' => [
 		'default' => false,
-		'pubwiki' => 'https://www.wikimedia.cz',
 		'oldwiki' => 'https://old.wikimedia.cz',
 		'innerwiki' => 'https://wiki.wikimedia.cz',
 		'techwiki' => 'https://tech.wikimedia.cz',
@@ -127,7 +126,6 @@ $wgConf->settings = [
 	],
 	'wgHashedUploadDirectory' => [
 		'default' => true,
-		'pubwiki' => false,
 		'oldwiki' => false,
 	],
 	'wgDefaultSkin' => [
@@ -136,7 +134,6 @@ $wgConf->settings = [
 	],
 	'wmgUseWidgets' => [
 		'default' => false,
-		'pubwiki' => true,
 		'oldwiki' => true,
 	],
 	'wgNamespacesWithSubpages' => [
@@ -168,7 +165,6 @@ $wgConf->settings = [
 	],
 	'wmgVisualEditor' => [
 		'default' => false,
-		'pubwiki' => true,
 		'innerwiki' => true,
 		'docswiki' => true,
 	],
