@@ -75,6 +75,9 @@ $wgConf->settings = [
 			'user' => [
 				'edit' => false,
 			],
+			'bureaucrat' => [
+				'edit' => true,
+			],
 		],
 		'+sul' => [
 			'*' => [
