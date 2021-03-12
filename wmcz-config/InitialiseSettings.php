@@ -198,4 +198,21 @@ $wgConf->settings = [
 		'oldwiki' => 'noindex,nofollow',
 		'private' => 'noindex,nofollow',
 	],
+	'wgNamespacesWithSubpages' => [
+		'default' => [
+			NS_TALK /* 1 */ => true,
+			NS_USER /* 2 */ => true,
+			NS_USER_TALK /* 3 */ => true,
+			NS_PROJECT /* 4 */ => true,
+			NS_PROJECT_TALK /* 5 */ => true,
+			NS_FILE_TALK /* 7 */ => true,
+			NS_MEDIAWIKI /* 8 */ => true,
+			NS_MEDIAWIKI_TALK /* 9 */ => true,
+			NS_TEMPLATE /* 10 */ => true,
+			NS_TEMPLATE_TALK /* 11 */ => true,
+			NS_HELP /* 12 */ => true,
+			NS_HELP_TALK /* 13 */ => true,
+			NS_CATEGORY_TALK /* 15 */ => true,
+		],
+	],
 ];
