@@ -35,6 +35,7 @@ $wgConf->settings = [
 			'sysop' => [
 				'deleterevision' => true,
 				'deletelogentry' => true,
+				'importupload' => false,
 			],
 			// Sysadmin stuff for bureaucrats
 			'bureaucrat' => [
@@ -92,6 +93,9 @@ $wgConf->settings = [
 			// Groups not counted in auto member counts, no special rghts, to show only
 			'techaccount' => [],
 			'nonmember' => [],
+			'transwiki' => [
+				'import' => true,
+			],
 		],
 		'+innerwiki' => [
 			'bureaucrat' => [
