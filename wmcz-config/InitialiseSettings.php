@@ -200,6 +200,7 @@ $wgConf->settings = [
 	],
 	'wgNamespacesWithSubpages' => [
 		'default' => [
+			NS_MAIN => true,
 			NS_TALK /* 1 */ => true,
 			NS_USER /* 2 */ => true,
 			NS_USER_TALK /* 3 */ => true,
