@@ -14,10 +14,10 @@ $loggers = [
 ];
 
 foreach ( $wmgMonologChannels as $channel => $level ) {
-	if (!isset($handlers["stream-$level"])) {
-		$handlers["stream-$level"] = [
+	if (!isset($handlers["stream-$channel-$level"])) {
+		$handlers["stream-$channel-$level"] = [
 			'class' => '\\Monolog\\Handler\\StreamHandler',
-			'args' => [ '/var/log/mediawiki/{channel}.log', $level ],
+			'args' => [ "/var/log/mediawiki/${channel}.log", $level ],
 			'formatter' => 'line'
 		];
 	}
@@ -25,7 +25,7 @@ foreach ( $wmgMonologChannels as $channel => $level ) {
 	if ($level !== false) {
 		$loggers[$channel] = [
 			'processors' => [ 'wiki', 'psr' ],
-			'handlers' => [ "stream-$level" ]
+			'handlers' => [ "stream-$channel-$level" ]
 		];
 	}
 }
