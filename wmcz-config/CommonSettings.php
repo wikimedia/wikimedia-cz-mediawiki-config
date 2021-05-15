@@ -206,8 +206,25 @@ if ($wmgDebug) {
 
 // Visualeditor
 if ( $wmgVisualEditor ) {
+	$PARSOID_INSTALL_DIR = '/var/www/wikis/parsoid';
+	if ( $PARSOID_INSTALL_DIR !== 'vendor/wikimedia/parsoid' ) {
+		AutoLoader::$psr4Namespaces += [
+			// Keep this in sync with the "autoload" clause in
+			// $PARSOID_INSTALL_DIR/composer.json
+			'Wikimedia\\Parsoid\\' => "$PARSOID_INSTALL_DIR/src",
+		];
+	}
+	wfLoadExtension( 'Parsoid', "$PARSOID_INSTALL_DIR/extension.json");
 	wfLoadExtension( 'VisualEditor' );
+	$wgVisualEditorParsoidAutoConfig = false;
+	$wgParsoidSettings = [
+		'useSelser' => true,
+		'rtTestMode' => false,
+		'linting' => false,
+	];
+	$wgVirtualRestConfig['modules']['parsoid'] = [];
 	$wgDefaultUserOptions['visualeditor-enable'] = 1;
+	$wgVirtualRestConfig['modules']['parsoid']['forwardCookies'] = true;
 
 	if ( !isset( $_SERVER['REMOTE_ADDR'] ) OR $_SERVER['REMOTE_ADDR'] == '37.205.8.151' /** Current public IP **/ ) {
 		$wgGroupPermissions['*']['read'] = true;
@@ -215,10 +232,10 @@ if ( $wmgVisualEditor ) {
 	}
 
 	// Set parsoid location
-	$wgVirtualRestConfig['modules']['parsoid'] = array(
+	/*$wgVirtualRestConfig['modules']['parsoid'] = array(
 		'url' => 'http://localhost:8000',
 		'domain' => $wgDBname,
-	);
+	);*/
 }
 
 // OAuth

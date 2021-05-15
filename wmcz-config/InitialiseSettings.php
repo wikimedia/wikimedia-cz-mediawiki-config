@@ -24,6 +24,7 @@ $wgConf->settings = [
 			'thumb' => 'info',
 			'ratelimit' => 'debug',
 			'dberror' => 'debug',
+			'VisualEditor' => 'debug',
 		]
 	],
 	'wgLanguageCode' => [
