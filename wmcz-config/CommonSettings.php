@@ -192,6 +192,7 @@ if ($wmgSSO) {
 	$wgSharedTables = [];
 	$wgSharedTables[] = 'user_properties';
 	$wgSharedTables[] = 'user';
+	$wgSharedTables[] = 'actor';
 	$wgSharedTables[] = 'user_groups';
 	$wgSharedTables[] = 'ipblocks';
 	$wgSharedTables[] = "ipblocks_restrictions";
