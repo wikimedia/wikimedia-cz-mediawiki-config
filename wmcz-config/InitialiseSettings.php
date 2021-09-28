@@ -31,6 +31,9 @@ $wgConf->settings = [
 		'default' => 'cs',
 		'techwiki' => 'en',
 	],
+	'wgLocaltimezone' => [
+		'default' => 'Europe/Prague',
+	],
 	'groupOverrides2' => [
 		'default' => [
 			'sysop' => [
