@@ -4,6 +4,8 @@
 global $wmgRealm;
 $wmgRealm = trim( file_get_contents( '/etc/wikimedia-cluster' ) ?: 'production' );
 
+// $wgReadOnly = 'Prave probiha udrzba serveru, wiki je v rezimu pouze pro cteni. Dekujeme za pochopeni.';
+
 # Switching stuff
 if ( defined( 'MW_DB' ) ) {
 	// Command-line mode and maintenance scripts (e.g. update.php) 
