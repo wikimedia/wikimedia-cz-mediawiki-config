@@ -261,5 +261,9 @@ if ( $wmgUseImgAuth ) {
 	$wgUploadPath = "/mw/img_auth.php";
 }
 
+// Security mitigation - https://www.mediawiki.org/wiki/2021-12_security_release/FAQ
+$wgActions['mcrundo'] = false;
+$wgActions['mcrrestore'] = false;
+
 // Test
 $wgHTTPImportTimeout = 1000;
