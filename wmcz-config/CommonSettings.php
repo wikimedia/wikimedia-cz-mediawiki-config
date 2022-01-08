@@ -102,6 +102,7 @@ $wgDefaultUserOptions['wikieditor-publish'] = 0;
 $wgScriptPath = '/mw';
 $wgArticlePath      = "/wiki/$1";
 $wgPasswordSender = "mw@wikimedia.cz";
+$wgFragmentMode = [ 'html5', 'legacy' ];
 
 // Configure uploads
 $wgEnableUploads       = true;
