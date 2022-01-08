@@ -71,6 +71,7 @@ wfLoadExtension( 'Thanks' );
 wfLoadExtension( 'CharInsert' );
 wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'Nuke' );
+wfLoadExtension( 'Linter' );
 wfLoadExtension( 'OATHAuth' );
 $wgOATHAuthDatabase = 'wikiusers';
 //wfLoadExtension( 'Gadgets' );
