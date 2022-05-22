@@ -78,6 +78,7 @@ $wgOATHAuthDatabase = 'wikiusers';
 wfLoadExtension( 'ParserFunctions' );
 wfLoadExtension( 'TemplateStyles' );
 $wgPFEnableStringFunctions = true;
+wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 
 wfLoadExtension( 'timeline' );
 // Timeline settings
