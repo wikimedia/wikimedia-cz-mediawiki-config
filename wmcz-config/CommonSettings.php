@@ -107,7 +107,6 @@ $wgFragmentMode = [ 'html5', 'legacy' ];
 // Configure uploads
 $wgEnableUploads       = true;
 $wgUploadDirectory = "/var/www/wikis/images/$wgDBname";
-$wgUploadSizeWarning = 4 * 1024 * 1024;
 $wgUploadPath = "/uploads/$wgDBname";
 $wgThumbnailScriptPath = "{$wgScriptPath}/thumb.php";
 
