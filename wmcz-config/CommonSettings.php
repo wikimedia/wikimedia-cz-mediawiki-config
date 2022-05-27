@@ -93,6 +93,7 @@ wfLoadExtension( 'MultimediaViewer' );
 $wgMediaViewerIsInBeta = false;
 
 // WikiEditor settings
+wfLoadExtension( 'CodeMirror' );
 wfLoadExtension('WikiEditor');
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
