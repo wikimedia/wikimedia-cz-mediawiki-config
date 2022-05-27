@@ -264,6 +264,10 @@ if ( $wmgUseDiscussionTools ) {
 	wfLoadExtension( 'DiscussionTools' );
 }
 
+if ( $wmgUseSandboxLink ) {
+	wfLoadExtension( 'SandboxLink' );
+}
+
 // For private wikis, use img_auth.php
 if ( $wmgUseImgAuth ) {
 	$wgUploadPath = "/mw/img_auth.php";

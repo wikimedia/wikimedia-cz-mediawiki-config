@@ -193,6 +193,10 @@ $wgConf->settings = [
 		'default' => false,
 		'innerwiki' => true,
 	],
+	'wmgUseSandboxLink' => [
+		'default' => false,
+		'innerwiki' => true,
+	],
 	'wgVisualEditorAvailableNamespaces' => [
 		'default' => [
 			'User' => true,
