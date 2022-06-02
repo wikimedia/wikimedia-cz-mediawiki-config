@@ -233,4 +233,9 @@ $wgConf->settings = [
 			NS_CATEGORY_TALK /* 15 */ => true,
 		],
 	],
+	'wgFixDoubleRedirects' => [
+		'default' => false,
+		'private' => true,
+		'fishbowl' => true
+	],
 ];
