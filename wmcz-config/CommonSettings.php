@@ -49,6 +49,7 @@ $wgDBTableOptions   = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
 // Configure cache
 if ( $wmgRealm === 'production' ) {
 	$wgMainCacheType = CACHE_MEMCACHED;
+	$wgMemCachedServers = [ '127.0.0.1:11211' ];
 }
 
 // Configure email notifications
