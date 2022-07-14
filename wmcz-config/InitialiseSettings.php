@@ -109,12 +109,12 @@ $wgConf->settings = [
 	],
 	'wgAddGroups' => [
 		'innerwiki' => [
-			'sysop' => [ 'nonmember' ],
+			'sysop' => [ 'nonmember', 'techaccount' ],
 		],
 	],
 	'wgRemoveGroups' => [
 		'innerwiki' => [
-			'sysop' => [ 'nonmember' ],
+			'sysop' => [ 'nonmember', 'techaccount' ],
 		],
 	],
 	'wgUseRCPatrol' => [
