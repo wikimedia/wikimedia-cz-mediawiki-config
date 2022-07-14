@@ -269,6 +269,11 @@ if ( $wmgUseSandboxLink ) {
 	wfLoadExtension( 'SandboxLink' );
 }
 
+if ( $wmgUseCheckUser ) {
+	wfLoadExtension( 'CheckUser' );
+	$wgCUDMaxAge = 365 * 2 * 24 * 3600; // 2 years
+}
+
 // For private wikis, use img_auth.php
 if ( $wmgUseImgAuth ) {
 	$wgUploadPath = "/mw/img_auth.php";

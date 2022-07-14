@@ -197,6 +197,9 @@ $wgConf->settings = [
 		'default' => false,
 		'innerwiki' => true,
 	],
+	'wmgUseCheckUser' => [
+		'default' => true,
+	],
 	'wgVisualEditorAvailableNamespaces' => [
 		'default' => [
 			'User' => true,
