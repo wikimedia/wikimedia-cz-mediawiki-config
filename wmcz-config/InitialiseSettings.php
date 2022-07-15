@@ -241,6 +241,10 @@ $wgConf->settings = [
 			NS_HELP_TALK /* 13 */ => true,
 			NS_CATEGORY_TALK /* 15 */ => true,
 		],
+		'+innerwiki' => [
+			3000 => true,
+			3001 => true,
+		],
 	],
 	'wgFixDoubleRedirects' => [
 		'default' => false,
