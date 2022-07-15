@@ -145,12 +145,6 @@ $wgConf->settings = [
 		'oldwiki' => true,
 		'innerwiki' => true,
 	],
-	'wgNamespacesWithSubpages' => [
-		'default' => [
-			0 => true,
-			1 => true,
-		],
-	],
 	'wmgDebug' => [
 		'default' => false,
 	],
