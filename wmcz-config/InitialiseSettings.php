@@ -157,6 +157,12 @@ $wgConf->settings = [
 	'wgBlockDisablesLogin' => [
 		'default' => true,
 	],
+	'wgExtraNamespaces' => [
+		'innerwiki' => [
+			3000 => 'Zastaralé',
+			3001 => 'Diskuse_k_zastaralému',
+		],
+	],
 	'wgExtraSignatureNamespaces' => [
 		'default' => [ NS_PROJECT, ],
 		'innerwiki' => [
