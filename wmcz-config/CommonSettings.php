@@ -37,6 +37,28 @@ if ( defined( 'MW_DB' ) ) {
 require_once __DIR__ . "/PrivateSettings.php";
 require_once __DIR__ . "/../DBLists.php";
 
+// Real configuration
+$wgConf = new SiteConfiguration;
+$wgConf->wikis = DBLists::readDbListFile( 'all' );
+$wgLocalDatabases = $wgConf->getLocalDatabases();
+
+list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
+require __DIR__ . "/InitialiseSettings.php";
+$confParams = [
+	'lang'    => $lang,
+	'docRoot' => $_SERVER['DOCUMENT_ROOT'],
+	'site'    => $site,
+];
+$dblists = [];
+foreach (["private", "sul", "fishbowl", "lockeddown"] as $dblist) {
+	$wikis = DBLists::readDbListFile( $dblist );
+	if ( in_array( $wgDBname, $wikis ) ) {
+		$dblists[] = $dblist;
+	}
+}
+$globals = $wgConf->getAll( $wgDBname, "wiki", $confParams, $dblists );
+extract( $globals );
+
 // Configure database
 $wgDBuser = "wikiuser";
 $wgDBadminuser = "wikiadmin";
@@ -140,28 +162,6 @@ $wgAllowCopyUploads = true;
 $wgCopyUploadsFromSpecialUpload = true;
 
 $wgEnableRestAPI = true;
-
-// Real configuration
-$wgConf = new SiteConfiguration;
-$wgConf->wikis = DBLists::readDbListFile( 'all' );
-$wgLocalDatabases = $wgConf->getLocalDatabases();
-
-list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
-require __DIR__ . "/InitialiseSettings.php";
-$confParams = [
-	'lang'    => $lang,
-	'docRoot' => $_SERVER['DOCUMENT_ROOT'],
-	'site'    => $site,
-];
-$dblists = [];
-foreach (["private", "sul", "fishbowl", "lockeddown"] as $dblist) {
-	$wikis = DBLists::readDbListFile( $dblist );
-	if ( in_array( $wgDBname, $wikis ) ) {
-		$dblists[] = $dblist;
-	}
-}
-$globals = $wgConf->getAll( $wgDBname, "wiki", $confParams, $dblists );
-extract( $globals );
 
 // Process permissions
 foreach ( $groupOverrides2 as $group => $permissions ) {
@@ -273,6 +273,10 @@ if ( $wmgUseSandboxLink ) {
 if ( $wmgUseCheckUser ) {
 	wfLoadExtension( 'CheckUser' );
 	$wgCUDMaxAge = 365 * 2 * 24 * 3600; // 2 years
+}
+
+if ( $wmgUseSecurePoll ) {
+	wfLoadExtension( 'SecurePoll' );
 }
 
 // For private wikis, use img_auth.php

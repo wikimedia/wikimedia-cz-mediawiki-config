@@ -49,6 +49,9 @@ $wgConf->settings = [
 				'interwiki' => true,
 				'siteadmin' => true,
 			],
+			'electionadmin' => [
+				'securepoll-create-poll' => true,
+			],
 		]
 	],
 	'groupOverrides' => [
@@ -199,6 +202,10 @@ $wgConf->settings = [
 	],
 	'wmgUseCheckUser' => [
 		'default' => true,
+	],
+	'wmgUseSecurePoll' => [
+		'default' => false,
+		'innerwiki' => true,
 	],
 	'wgVisualEditorAvailableNamespaces' => [
 		'default' => [
