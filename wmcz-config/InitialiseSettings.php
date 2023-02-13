@@ -39,7 +39,6 @@ $wgConf->settings = [
 			'sysop' => [
 				'deleterevision' => true,
 				'deletelogentry' => true,
-				'importupload' => false,
 			],
 			// Sysadmin stuff for bureaucrats
 			'bureaucrat' => [
