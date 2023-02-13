@@ -279,6 +279,20 @@ if ( $wmgUseSecurePoll ) {
 	wfLoadExtension( 'SecurePoll' );
 }
 
+if ( $wmgUseCodeEditor ) {
+	wfLoadExtension( 'CodeEditor' );
+	$wgDefaultUserOptions['usebetatoolbar'] = 1;
+}
+
+if ( $wmgUseSyntaxHighlight ) {
+	wfLoadExtension( 'SyntaxHighlight_GeSHi' );
+}
+
+if ( $wmgUseScribunto ) {
+	wfLoadExtension( 'Scribunto' );
+	$wgScribuntoDefaultEngine = 'luastandalone';
+}
+
 // For private wikis, use img_auth.php
 if ( $wmgUseImgAuth ) {
 	$wgUploadPath = "/mw/img_auth.php";

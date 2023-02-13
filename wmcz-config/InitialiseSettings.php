@@ -207,6 +207,18 @@ $wgConf->settings = [
 		'default' => false,
 		'innerwiki' => true,
 	],
+	'wmgUseCodeEditor' => [
+		'default' => false,
+		'innerwiki' => true,
+	],
+	'wmgUseSyntaxHighlight' => [
+		'default' => false,
+		'innerwiki' => true,
+	],
+	'wmgUseScribunto' => [
+		'default' => false,
+		'innerwiki' => true,
+	],
 	'wgVisualEditorAvailableNamespaces' => [
 		'default' => [
 			'User' => true,
