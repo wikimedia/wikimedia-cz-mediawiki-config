@@ -169,6 +169,8 @@ $wgConf->settings = [
 	'wgImportSources' => [
 		'default' => [
 			'w',
+			'cs',
+			'en',
 			'web',
 		]
 	],
