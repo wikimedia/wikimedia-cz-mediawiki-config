@@ -81,6 +81,7 @@ $wgEnotifUserTalk = true;
 
 // Load skins and extensions
 wfLoadSkins( [ 'Vector', 'MonoBook', 'Modern', 'CologneBlue', 'Timeless' ] );
+wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'Cite' );
 wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'ImageMap' );
