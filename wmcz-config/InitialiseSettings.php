@@ -200,7 +200,9 @@ $wgConf->settings = [
 	],
 	'wmgUseSandboxLink' => [
 		'default' => false,
+		'docswiki' => true,
 		'innerwiki' => true,
+		'techwiki' => true,
 	],
 	'wmgUseCheckUser' => [
 		'default' => true,
