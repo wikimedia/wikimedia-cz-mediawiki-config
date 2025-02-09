@@ -219,6 +219,7 @@ $wgConf->settings = [
 	],
 	'wmgUseScribunto' => [
 		'default' => false,
+		'docswiki' => true,
 		'innerwiki' => true,
 	],
 	'wgVisualEditorAvailableNamespaces' => [
