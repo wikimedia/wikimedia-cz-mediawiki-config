@@ -72,6 +72,7 @@ $wgConf->settings = [
 		'+fishbowl' => [
 			'*' => [
 				'edit' => false,
+				'createaccount' => false,
 			],
 		],
 		'+lockeddown' => [
