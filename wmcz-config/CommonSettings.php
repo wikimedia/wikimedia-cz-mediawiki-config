@@ -96,7 +96,7 @@ wfLoadExtension( 'CharInsert' );
 wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'Nuke' );
 wfLoadExtension( 'Linter' );
-wfLoadExtension( 'OATHAuth' );
+//wfLoadExtension( 'OATHAuth' );
 $wgOATHAuthDatabase = 'wikiusers';
 //wfLoadExtension( 'Gadgets' );
 wfLoadExtension( 'ParserFunctions' );
