@@ -141,7 +141,6 @@ $wgConf->settings = [
 	],
 	'wgDefaultSkin' => [
 		'default' => 'vector',
-		'innerwiki' => 'monobook',
 	],
 	'wmgUseWidgets' => [
 		'default' => false,
