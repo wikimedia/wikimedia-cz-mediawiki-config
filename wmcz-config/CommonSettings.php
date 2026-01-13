@@ -201,6 +201,8 @@ if ($wmgSSO) {
 	$wgSharedTables[] = 'actor';
 	$wgSharedTables[] = 'user_groups';
 	$wgSharedTables[] = 'ipblocks';
+	$wgSharedTables[] = 'block';
+	$wgSharedTables[] = 'block_target';
 	$wgSharedTables[] = "ipblocks_restrictions";
 	$wgSharedTables[] = 'interwiki';
 }
