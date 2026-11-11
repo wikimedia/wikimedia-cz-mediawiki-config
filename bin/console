@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+declare( strict_types=1 );
+
+use Symfony\Component\Console\Application;
+use WMCZ\Command\PrepareMediaWikiCommand;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$application = new Application( 'wikimedia-cz/mediawiki-config' );
+$application->addCommand( new PrepareMediaWikiCommand( dirname( __DIR__ ) ) );
+$application->run();

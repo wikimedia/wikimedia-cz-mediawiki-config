@@ -1,0 +1,64 @@
+# Extensions and skins that need to be present in a MediaWiki tree for the
+# configuration in wmcz-config/ to work. Used by bin/prepare-mediawiki.php.
+#
+# Keep this in sync with the wfLoadExtension() / wfLoadSkins() calls in
+# wmcz-config/CommonSettings.php (including conditionally loaded ones).
+#
+# Format: one entry per line, whitespace-separated:
+#
+#   <type>      <name>          [<branch>]
+#
+#   type:   "extension" or "skin"
+#   name:   name of the extension/skin, as passed to wfLoadExtension() / wfLoadSkin()
+#   branch: optional; ExtensionDistributor branch to fetch (e.g. "master").
+#           Defaults to the release branch of the MediaWiki version being
+#           prepared (e.g. REL1_46). Ignored for things bundled in the tarball.
+#
+# Anything after "#" is a comment.
+
+# Skins
+skin        CologneBlue
+skin        Modern
+skin        MonoBook
+skin        Timeless
+skin        Vector
+
+# Extensions
+extension   AbuseFilter
+extension   CategoryTree
+extension   CharInsert
+extension   CheckUser
+extension   Cite
+extension   CodeEditor
+extension   CodeMirror
+extension   DiscussionTools
+extension   Echo
+extension   ImageMap
+extension   InputBox
+extension   Interwiki
+extension   LabeledSectionTransclusion
+extension   Linter
+extension   MultimediaViewer
+extension   Nuke
+extension   OATHAuth                    # temporarily disabled in CommonSettings.php
+extension   OAuth
+extension   ParserFunctions
+extension   PdfHandler
+extension   Poem
+extension   Renameuser
+extension   ReplaceText
+extension   SandboxLink
+extension   Scribunto
+extension   SecurePoll
+extension   SyntaxHighlight_GeSHi
+extension   TemplateStyles
+extension   Thanks
+extension   timeline
+extension   UserMerge
+extension   VisualEditor
+extension   Widgets
+extension   WikiEditor
+
+# Not loaded at the moment (commented out in CommonSettings.php):
+# extension Gadgets
+# extension TitleKey
