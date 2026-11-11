@@ -57,7 +57,3 @@ extension   UserMerge
 extension   VisualEditor
 extension   Widgets
 extension   WikiEditor
-
-# Not loaded at the moment (commented out in CommonSettings.php):
-# extension Gadgets
-# extension TitleKey
