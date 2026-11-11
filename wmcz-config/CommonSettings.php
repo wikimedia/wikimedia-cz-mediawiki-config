@@ -216,29 +216,7 @@ if ($wmgDebug) {
 
 // Visualeditor
 if ( $wmgVisualEditor ) {
-	//$PARSOID_INSTALL_DIR = '/var/www/wikis/parsoid';
-	//wfLoadExtension( 'Parsoid', "$PARSOID_INSTALL_DIR/extension.json");
 	wfLoadExtension( 'VisualEditor' );
-	//$wgVisualEditorParsoidAutoConfig = false;
-	/*$wgParsoidSettings = [
-		'useSelser' => true,
-		'rtTestMode' => false,
-		'linting' => false,
-	];
-	$wgVirtualRestConfig['modules']['parsoid'] = [];
-	$wgDefaultUserOptions['visualeditor-enable'] = 1;
-	$wgVirtualRestConfig['modules']['parsoid']['forwardCookies'] = true;*/
-
-//	if ( !isset( $_SERVER['REMOTE_ADDR'] ) OR $_SERVER['REMOTE_ADDR'] == '37.205.8.151' /** Current public IP **/ ) {
-//		$wgGroupPermissions['*']['read'] = true;
-//		$wgGroupPermissions['*']['edit'] = true;
-//	}
-
-	// Set parsoid location
-	/*$wgVirtualRestConfig['modules']['parsoid'] = array(
-		'url' => 'http://localhost:8000',
-		'domain' => $wgDBname,
-	);*/
 }
 
 // OAuth
