@@ -35,7 +35,6 @@ extension   DiscussionTools
 extension   Echo
 extension   ImageMap
 extension   InputBox
-extension   Interwiki
 extension   LabeledSectionTransclusion
 extension   Linter
 extension   MultimediaViewer

@@ -83,7 +83,6 @@ $wgEnotifUserTalk = true;
 wfLoadSkins( [ 'Vector', 'MonoBook', 'Modern', 'CologneBlue', 'Timeless' ] );
 wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'Cite' );
-wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'ImageMap' );
 wfLoadExtension( 'InputBox' );
 //wfLoadExtension( 'TitleKey' );
