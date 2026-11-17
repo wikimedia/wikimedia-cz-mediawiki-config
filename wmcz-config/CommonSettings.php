@@ -225,6 +225,8 @@ if ( $wmgUseOAuth  ) {
 	$wgGroupPermissions['bureaucrat']['mwoauthmanageconsumer'] = true;
 	$wgWhitelistRead[] = 'Special:OAuth';
 	$wgWhitelistRead[] = 'Speciální:OAuth';
+	$wgMWOAuthSharedUserIDs=true;
+	$wgMWOAuthSharedUserSource='local';
 }
 
 // ReplaceText
